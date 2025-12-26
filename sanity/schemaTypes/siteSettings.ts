@@ -67,11 +67,7 @@ export default defineType({
       title: "Hero Subheadline",
       type: "text",
     }),
-    defineField({
-      name: "twitterHandle",
-      title: "Twitter Handle",
-      type: "string",
-    }),
+
     defineField({
       name: "footer",
       title: "Footer Settings",
