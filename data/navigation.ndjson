@@ -1,0 +1,8 @@
+{"_type":"navigation","_id":"nav-1","title":"Home","href":"#home","icon":"IconHome","isExternal":false,"order":1}
+{"_type":"navigation","_id":"nav-2","title":"About","href":"#about","icon":"IconUser","isExternal":false,"order":2}
+{"_type":"navigation","_id":"nav-4","title":"Projects","href":"#projects","icon":"IconCode","isExternal":false,"order":4}
+{"_type":"navigation","_id":"nav-5","title":"Skills","href":"#skills","icon":"IconBulb","isExternal":false,"order":5}
+{"_type":"navigation","_id":"nav-6","title":"Services","href":"#services","icon":"IconTools","isExternal":false,"order":6}
+{"_type":"navigation","_id":"nav-7","title":"Education","href":"#education","icon":"IconSchool","isExternal":false,"order":7}
+{"_type":"navigation","_id":"nav-12","title":"Contact","href":"#contact","icon":"IconMail","isExternal":false,"order":12}
+{"_type":"navigation","_id":"nav-13","title":"GitHub","href":"https://github.com/Mahmoud123Jamal","icon":"IconBrandGithub","isExternal":true,"order":13}
