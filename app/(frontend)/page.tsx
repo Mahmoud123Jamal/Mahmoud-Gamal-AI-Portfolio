@@ -1,9 +1,9 @@
-import { UserButton } from "@clerk/nextjs";
+import PortfolioContent from "@/components/ui/portfolioContent";
 
 export default function Home() {
   return (
-    <div>
-      <UserButton />
-    </div>
+    <main>
+      <PortfolioContent />
+    </main>
   );
 }
