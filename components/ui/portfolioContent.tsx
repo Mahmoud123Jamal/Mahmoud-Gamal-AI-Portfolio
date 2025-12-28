@@ -1,5 +1,11 @@
+import Hero from "./sections/Hero";
+
 function PortfolioContent() {
-  return <div>portfolioContent</div>;
+  return (
+    <main className="h-min-screen">
+      <Hero />
+    </main>
+  );
 }
 
 export default PortfolioContent;
