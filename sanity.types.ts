@@ -408,3 +408,55 @@ export type AllSanitySchemaTypes =
   | Geopoint;
 
 export declare const internalGroqTypeReferenceTo: unique symbol;
+
+// Source: components\ui\sections\Hero.tsx
+// Variable: HERO_QUERY
+// Query: *[_type == "profile" && _id == "singleton-profile"][0] {      firstName,      lastName,      headline,      headlineStaticText,      shortBio,      fullBio,      email,      phone,      location,      yearsOfExperience,      stats,      socialLinks,      "fullName": firstName + " " + lastName    }
+export type HERO_QUERY_RESULT = {
+  firstName: string | null;
+  lastName: string | null;
+  headline: string | null;
+  headlineStaticText: string | null;
+  shortBio: string | null;
+  fullBio: Array<{
+    children?: Array<{
+      marks?: Array<string>;
+      text?: string;
+      _type: "span";
+      _key: string;
+    }>;
+    style?: "blockquote" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "normal";
+    listItem?: "bullet" | "number";
+    markDefs?: Array<{
+      href?: string;
+      _type: "link";
+      _key: string;
+    }>;
+    level?: number;
+    _type: "block";
+    _key: string;
+  }> | null;
+  email: string | null;
+  phone: string | null;
+  location: string | null;
+  yearsOfExperience: number | null;
+  stats: Array<{
+    label?: string;
+    value?: string;
+    _key: string;
+  }> | null;
+  socialLinks: {
+    github?: string;
+    linkedin?: string;
+    website?: string;
+  } | null;
+  fullName: string | null;
+} | null;
+
+// Query TypeMap
+import "@sanity/client";
+declare module "@sanity/client" {
+  interface SanityQueries {
+    '\n    *[_type == "profile" && _id == "singleton-profile"][0] {\n      firstName,\n      lastName,\n      headline,\n      headlineStaticText,\n      shortBio,\n      fullBio,\n      email,\n      phone,\n      location,\n      yearsOfExperience,\n      stats,\n      socialLinks,\n      "fullName": firstName + " " + lastName\n    }\n  ': HERO_QUERY_RESULT;
+  }
+}
