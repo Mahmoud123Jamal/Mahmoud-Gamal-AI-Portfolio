@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { ClerkProvider } from "@clerk/nextjs";
+import { SanityLive } from "@/sanity/lib/live";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,23 +15,18 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Eng.Mahmoud Gamal",
-  description: "Mahmoud gamal portofolio using Ai",
+  description: "Mahmoud gamal portfolio using AI",
 };
 
-export default function RootLayout({
+export default function FrontendLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
-          {children}
-        </body>
-      </html>
-    </ClerkProvider>
+    <div className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      {children}
+      <SanityLive />
+    </div>
   );
 }
