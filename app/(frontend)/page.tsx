@@ -1,9 +1,10 @@
+import Hero from "@/components/ui/sections/Hero";
 import PortfolioContent from "@/components/ui/portfolioContent";
 
-export default function Home() {
+export default async function Home() {
   return (
-    <main>
-      <PortfolioContent />
-    </main>
+    <PortfolioContent>
+      <Hero />
+    </PortfolioContent>
   );
 }
