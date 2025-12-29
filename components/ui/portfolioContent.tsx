@@ -1,11 +1,14 @@
-import Hero from "./sections/Hero";
+"use client";
+import { AuroraBackground } from "@/components/ui/aurora-background";
 
-function PortfolioContent() {
+export default function PortfolioContent({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <main className="h-min-screen">
-      <Hero />
-    </main>
+    <AuroraBackground showRadialGradient={true} className="py-10">
+      {children}
+    </AuroraBackground>
   );
 }
-
-export default PortfolioContent;
