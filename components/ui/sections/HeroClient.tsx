@@ -24,12 +24,13 @@ export default function HeroClient({ profileData }: { profileData: any }) {
       initial="hidden"
       animate="visible"
       variants={containerVariants}
-      className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mt-16 px-16"
+      className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-10 items-center mt-10 md:mt-16 px-6 md:px-16 py-10"
     >
       {/* Left Side: Content */}
-      <div className="flex flex-col space-y-6">
+
+      <div className="flex flex-col space-y-6 text-center lg:text-left items-center lg:items-start">
         <motion.div variants={itemVariants} className="space-y-2">
-          <h1 className="text-3xl md:text-5xl font-bold tracking-tighter">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter leading-tight">
             {profileData.firstName} {profileData.lastName}
           </h1>
           <h2 className="text-xl md:text-2xl text-muted-foreground font-medium">
@@ -39,21 +40,24 @@ export default function HeroClient({ profileData }: { profileData: any }) {
 
         <motion.p
           variants={itemVariants}
-          className="text-lg text-gray-600 max-w-[600px] leading-relaxed"
+          className="text-base md:text-lg text-gray-600 max-w-[600px] leading-relaxed text-justify md:text-left"
         >
           {profileData.shortBio}
         </motion.p>
 
         <motion.div
           variants={itemVariants}
-          className="grid grid-cols-3 gap-4 pt-4"
+          className="grid grid-cols-3 gap-2 md:gap-4 pt-4 w-full max-w-sm lg:max-w-none"
         >
           {profileData.stats?.map((stat: any) => (
-            <div key={stat._key} className="flex flex-col">
-              <span className="text-2xl font-bold text-foreground">
+            <div
+              key={stat._key}
+              className="flex flex-col items-center lg:items-start"
+            >
+              <span className="text-xl md:text-2xl font-bold text-foreground">
                 {stat.value}
               </span>
-              <span className="text-sm text-muted-foreground">
+              <span className="text-[10px] md:text-sm uppercase tracking-wider text-muted-foreground">
                 {stat.label}
               </span>
             </div>
@@ -62,25 +66,25 @@ export default function HeroClient({ profileData }: { profileData: any }) {
 
         <motion.div
           variants={itemVariants}
-          className="flex flex-wrap gap-4 pt-6"
+          className="flex flex-col sm:flex-row gap-4 pt-6 w-full sm:w-auto"
         >
           <Link
             href={profileData.socialLinks?.github || "#"}
-            className="px-6 py-3 bg-black text-white rounded-full hover:scale-105 transition-transform text-center z-20"
+            className="px-8 py-3 bg-black text-white rounded-full hover:scale-105 transition-transform text-center z-20 shadow-lg"
             target="_blank"
           >
             GitHub
           </Link>
           <Link
             href={profileData.socialLinks?.linkedin || "#"}
-            className="px-6 py-3 bg-[#0077b5] text-white rounded-full hover:scale-105 transition-transform text-center z-20"
+            className="px-8 py-3 bg-[#0077b5] text-white rounded-full hover:scale-105 transition-transform text-center z-20 shadow-lg"
             target="_blank"
           >
             LinkedIn
           </Link>
           <a
             href={`mailto:${profileData.email}`}
-            className="px-6 py-3 border border-gray-300 rounded-full hover:bg-gray-50 transition-all text-center z-20"
+            className="px-8 py-3 border border-gray-300 rounded-full hover:bg-gray-200 transition-all text-center z-20"
           >
             Contact Me
           </a>
@@ -90,33 +94,34 @@ export default function HeroClient({ profileData }: { profileData: any }) {
       {/* Right Side: Image/Card */}
       <motion.div
         variants={itemVariants}
-        className="relative flex justify-center items-center"
+        className="relative flex justify-center items-center order-first lg:order-none mb-4 lg:mb-0"
       >
-        {/* Animated Glow behind image */}
+        {/* Animated Glow: Responsive size */}
         <motion.div
           animate={{
             scale: [1, 1.1, 1],
             opacity: [0.2, 0.3, 0.2],
           }}
           transition={{ duration: 4, repeat: Infinity }}
-          className="w-[300px] h-[300px] md:w-[400px] md:h-[400px] bg-linear-to-tr from-blue-500 to-purple-500 rounded-full blur-[80px] absolute z-0"
+          className="w-[250px] h-[250px] md:w-[350px] md:h-[350px] lg:w-[450px] lg:h-[450px] bg-linear-to-tr from-blue-500 to-purple-500 rounded-full blur-[60px] md:blur-[80px] absolute z-0"
         />
 
         <div className="relative group z-10">
           {profileData.profileImage ? (
-            <Image
-              src={urlFor(profileData.profileImage)
-                .width(500)
-                .height(500)
-                .url()}
-              alt={`${profileData.firstName} profile`}
-              width={400}
-              height={400}
-              className="rounded-full object-cover shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 border border-white/20"
-              priority
-            />
+            <div className="w-[240px] h-[240px] md:w-[320px] md:h-[320px] lg:w-[400px] lg:h-[400px] relative">
+              <Image
+                src={urlFor(profileData.profileImage)
+                  .width(600)
+                  .height(600)
+                  .url()}
+                alt={`${profileData.firstName} profile`}
+                fill
+                className="rounded-full object-cover shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 border border-white/20"
+                priority
+              />
+            </div>
           ) : (
-            <div className="relative p-8 bg-zinc-900 backdrop-blur-sm border border-white/10 rounded-2xl shadow-2xl font-mono text-sm text-blue-400">
+            <div className="relative p-6 md:p-8 bg-zinc-900/90 backdrop-blur-sm border border-white/10 rounded-2xl shadow-2xl font-mono text-xs md:text-sm text-blue-400">
               <p className="text-zinc-500 mb-2">// Software Engineer Profile</p>
               <p>
                 <span className="text-purple-400">const</span> engineer = {"{"}
@@ -129,8 +134,7 @@ export default function HeroClient({ profileData }: { profileData: any }) {
                 ,
               </p>
               <p className="ml-4">
-                status:{" "}
-                <span className="text-green-400">"Available for Work"</span>,
+                status: <span className="text-green-400">"Available"</span>,
               </p>
               <p className="ml-4">
                 location:{" "}
