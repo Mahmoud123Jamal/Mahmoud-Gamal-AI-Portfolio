@@ -1,11 +1,18 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { urlFor } from "@/sanity/lib/image";
 
 export default function HeroClient({ profileData }: { profileData: any }) {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -19,6 +26,10 @@ export default function HeroClient({ profileData }: { profileData: any }) {
     visible: { y: 0, opacity: 1, transition: { duration: 0.5 } },
   };
 
+  if (!mounted) {
+    return <div className="min-h-screen" />;
+  }
+
   return (
     <motion.section
       initial="hidden"
@@ -26,8 +37,6 @@ export default function HeroClient({ profileData }: { profileData: any }) {
       variants={containerVariants}
       className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-10 items-center mt-10 md:mt-16 px-6 md:px-16 py-10"
     >
-      {/* Left Side: Content */}
-
       <div className="flex flex-col space-y-6 text-center lg:text-left items-center lg:items-start">
         <motion.div variants={itemVariants} className="space-y-2">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter leading-tight">
@@ -91,12 +100,10 @@ export default function HeroClient({ profileData }: { profileData: any }) {
         </motion.div>
       </div>
 
-      {/* Right Side: Image/Card */}
       <motion.div
         variants={itemVariants}
         className="relative flex justify-center items-center order-first lg:order-none mb-4 lg:mb-0"
       >
-        {/* Animated Glow: Responsive size */}
         <motion.div
           animate={{
             scale: [1, 1.1, 1],
