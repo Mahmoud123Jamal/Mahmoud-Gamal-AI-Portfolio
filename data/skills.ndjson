@@ -2,15 +2,14 @@
 {"_type":"skill","name":"CSS3","category":"frontend","proficiency":"expert","percentage":90,"color":"#1572B6"}
 {"_type":"skill","name":"JavaScript","category":"frontend","proficiency":"expert","percentage":95,"color":"#F7DF1E"}
 {"_type":"skill","name":"TypeScript","category":"frontend","proficiency":"advanced","percentage":85,"color":"#3178C6"}
-{"_type":"skill","name":"React.js 19","category":"frontend","proficiency":"expert","percentage":95,"color":"#61DAFB"}
-{"_type":"skill","name":"Next.js 15","category":"frontend","proficiency":"expert","percentage":92,"color":"#000000"}
-{"_type":"skill","name":"Tailwind CSS 4.0","category":"frontend","proficiency":"expert","percentage":98,"color":"#06B6D4"}
+{"_type":"skill","name":"React","category":"frontend","proficiency":"expert","percentage":95,"color":"#61DAFB"}
+{"_type":"skill","name":"Next.js","category":"frontend","proficiency":"expert","percentage":92,"color":"#000000"}
+{"_type":"skill","name":"Tailwind CSS","category":"frontend","proficiency":"expert","percentage":98,"color":"#06B6D4"}
 {"_type":"skill","name":"Redux Toolkit","category":"frontend","proficiency":"advanced","percentage":80,"color":"#764ABC"}
 {"_type":"skill","name":"Node.js","category":"backend","proficiency":"advanced","percentage":88,"color":"#339933"}
 {"_type":"skill","name":"Express.js","category":"backend","proficiency":"advanced","percentage":85,"color":"#000000"}
-{"_type":"skill","name":"MongoDB Atlas","category":"database","proficiency":"advanced","percentage":82,"color":"#47A248"}
+{"_type":"skill","name":"MongoDB","category":"database","proficiency":"advanced","percentage":82,"color":"#47A248"}
 {"_type":"skill","name":"Neon PostgreSQL","category":"database","proficiency":"intermediate","percentage":75,"color":"#00E599"}
 {"_type":"skill","name":"Drizzle ORM","category":"database","proficiency":"intermediate","percentage":78,"color":"#C5F74F"}
 {"_type":"skill","name":"Git / GitHub","category":"tools","proficiency":"advanced","percentage":90,"color":"#F05032"}
 {"_type":"skill","name":"Postman","category":"tools","proficiency":"advanced","percentage":85,"color":"#FF6C37"}
-{"_type":"skill","name":"Docker (Basics)","category":"tools","proficiency":"beginner","percentage":40,"color":"#2496ED"}
