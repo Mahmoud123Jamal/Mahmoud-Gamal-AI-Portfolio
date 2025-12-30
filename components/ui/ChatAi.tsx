@@ -297,8 +297,8 @@ export function ChatAi() {
           </form>
 
           <div className="text-xs text-gray-400 text-center mt-3">
-            AI Assistant powered by gemma • Responses based on real portfolio
-            data
+            AI Assistant powered by meta-llama • Responses based on real
+            portfolio data
           </div>
         </div>
       </SheetContent>
