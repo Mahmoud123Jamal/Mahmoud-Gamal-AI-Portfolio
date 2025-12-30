@@ -102,7 +102,7 @@ export default function HeroClient({ profileData }: { profileData: any }) {
 
       <motion.div
         variants={itemVariants}
-        className="relative flex justify-center items-center order-first lg:order-none mb-4 lg:mb-0"
+        className="relative flex justify-center items-center order-first lg:order-0 mb-4 lg:mb-0"
       >
         <motion.div
           animate={{
