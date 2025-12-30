@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import Hero from "@/components/ui/sections/Hero";
 import PortfolioContent from "@/components/portfolioContent";
 import About from "@/components/ui/sections/About";
+import Skills from "@/components/ui/sections/Skills";
 
 function LoadingFallback() {
   return (
@@ -20,6 +21,7 @@ export default async function Home() {
         <PortfolioContent>
           <Hero />
           <About />
+          <Skills />
         </PortfolioContent>
       </Suspense>
     </main>
