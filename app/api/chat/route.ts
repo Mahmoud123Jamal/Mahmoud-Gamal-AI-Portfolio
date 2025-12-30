@@ -98,9 +98,11 @@ RESPONSE GUIDELINES:
 4. Use emojis occasionally to make it engaging
 5. For technical questions: explain thoroughly with examples
 6. For personal questions: answer naturally and conversationally
-7. Structure answers clearly with paragraphs
+7. Structure answers clearly with paragraphs(4 or 5 sentences)
 8. Mention specific projects when relevant
-9. Include contact info when asked about hiring or contact`;
+9. Include contact info when asked about hiring or contact
+10. Do not fake data
+`;
 
         const response = await fetch(
           "https://openrouter.ai/api/v1/chat/completions",
