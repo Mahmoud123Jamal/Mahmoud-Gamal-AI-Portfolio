@@ -48,7 +48,7 @@ export default function PortfolioContent({
   }, []);
 
   return (
-    <AuroraBackground showRadialGradient={true} className="py-10">
+    <AuroraBackground showRadialGradient={true} className="py-3">
       {children}
     </AuroraBackground>
   );
