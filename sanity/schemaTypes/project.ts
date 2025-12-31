@@ -30,6 +30,13 @@ export default defineType({
       description: "Short one-liner about the project",
       validation: (Rule) => Rule.max(150),
     }),
+    // ADDED DESCRIPTION FIELD BELOW
+    defineField({
+      name: "description",
+      title: "Project Description",
+      type: "text",
+      validation: (Rule) => Rule.required(),
+    }),
     defineField({
       name: "coverImage",
       title: "Cover Image",
@@ -56,9 +63,9 @@ export default defineType({
       type: "string",
       options: {
         list: [
-          { title: "Web Intgrated With AI", value: "Web Intgrated With AI" },
+          { title: "Web Integrated With AI", value: "Web Integrated With AI" },
           { title: "MERN Stack", value: "MERN Stack" },
-          { title: "Web Application", value: "Web App" },
+          { title: "Web Application", value: "Web App" }, // Matches "Web App" in your JSON
         ],
       },
       validation: (Rule) => Rule.required(),
