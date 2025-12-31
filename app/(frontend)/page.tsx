@@ -4,6 +4,7 @@ import PortfolioContent from "@/components/portfolioContent";
 import About from "@/components/ui/sections/About";
 import Skills from "@/components/ui/sections/Skills";
 import ChaChatAiWrapper from "@/components/ui/ChatAiWrapper";
+import Projects from "@/components/ui/sections/Projects";
 
 function LoadingFallback() {
   return (
@@ -23,6 +24,7 @@ export default async function Home() {
           <Hero />
           <About />
           <Skills />
+          <Projects />
         </PortfolioContent>
       </Suspense>
       <ChaChatAiWrapper />
