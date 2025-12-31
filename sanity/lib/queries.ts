@@ -30,3 +30,19 @@ export const CATEGORIZED_SKILLS_QUERY = defineQuery(`
     "tools": *[_type == "skill" && category == "tools"] | order(percentage desc)
   }
 `);
+
+export const PROJECTS_QUERY = defineQuery(`
+*[_type == "project"] | order(order asc) {
+  _id,
+  title,
+  "slug": slug.current,
+  tagline,
+  description,
+  techStack,
+  category,
+  github,
+  liveDemo,
+  featured,
+  "image": coverImage.asset->url
+}
+`);
