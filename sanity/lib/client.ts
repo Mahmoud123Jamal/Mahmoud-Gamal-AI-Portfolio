@@ -1,6 +1,10 @@
 import { createClient } from "next-sanity";
-import { apiVersion, dataset, projectId } from "../env";
-
+import { apiVersion, dataset, projectId, token } from "../env";
+if (!token) {
+  console.warn(
+    "SANITY_API_WRITE_TOKEN is missing. Contact form submissions will fail."
+  );
+}
 export const client = createClient({
   projectId,
   dataset,
@@ -10,4 +14,5 @@ export const client = createClient({
     cache: "no-store",
     next: { revalidate: 0 },
   },
+  token,
 });
