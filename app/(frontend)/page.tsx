@@ -3,6 +3,7 @@ import Hero from "@/components/ui/sections/Hero";
 import PortfolioContent from "@/components/portfolioContent";
 import About from "@/components/ui/sections/About";
 import Skills from "@/components/ui/sections/Skills";
+import ChaChatAiWrapper from "@/components/ui/ChatAiWrapper";
 
 function LoadingFallback() {
   return (
@@ -24,6 +25,7 @@ export default async function Home() {
           <Skills />
         </PortfolioContent>
       </Suspense>
+      <ChaChatAiWrapper />
     </main>
   );
 }
