@@ -28,7 +28,7 @@ export default defineType({
       type: "text",
       options: {
         rows: 5,
-      },
+      } as any,
       validation: (Rule) => Rule.required(),
     }),
     defineField({
