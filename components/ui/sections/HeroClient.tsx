@@ -123,7 +123,7 @@ export default function HeroClient({ profileData }: { profileData: any }) {
                   .url()}
                 alt={`${profileData.firstName} profile`}
                 fill
-                className="rounded-full object-cover shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 border border-white/20"
+                className="rounded-full mt-6 md:mt-2 object-cover shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 border border-white/20"
                 priority
               />
             </div>
