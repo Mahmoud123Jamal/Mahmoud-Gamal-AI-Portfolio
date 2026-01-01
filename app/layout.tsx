@@ -1,4 +1,4 @@
-import { SanityLive } from "@/sanity/lib/live";
+import SanityLiveWrapper from "@/components/SanityLiveWrapper";
 import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -15,8 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Eng.Mahmoud Gamal",
-  description: "Mahmoud gamal portfolio using AI",
+  title: "Mahmoud Ghoraba",
+  description: "Mahmoud Ghoraba portfolio With AI",
+  icons: { icon: "/favicon.ico" },
 };
 
 export default function RootLayout({
@@ -34,7 +35,7 @@ export default function RootLayout({
             {children}
           </div>
 
-          <SanityLive />
+          <SanityLiveWrapper />
         </body>
       </html>
     </ClerkProvider>
