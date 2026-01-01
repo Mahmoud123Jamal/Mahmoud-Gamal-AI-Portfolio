@@ -112,7 +112,7 @@ RESPONSE GUIDELINES:
               "Content-Type": "application/json",
               Authorization: `Bearer ${apiKey}`,
               "HTTP-Referer":
-                process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
+                process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3005",
               "X-Title": `${profile.firstName}'s Portfolio`,
             },
             body: JSON.stringify({
@@ -127,7 +127,7 @@ RESPONSE GUIDELINES:
                   content: message,
                 },
               ],
-              max_tokens: 800,
+              max_tokens: 500,
               temperature: 0.8,
             }),
           }
