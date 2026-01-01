@@ -23,11 +23,16 @@ export default function SkillsClient({
   };
 
   return (
-    <section className="py-10" id="skills">
+    <section className="py-5" id="skills">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl text-center mb-8 md:text-6xl font-bold tracking-tighter text-zinc-900 dark:text-white">
+        <motion.h2
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          className="text-4xl text-center mb-8 md:text-6xl font-bold tracking-tighter text-zinc-900 dark:text-white"
+        >
           My Skills
-        </h2>
+        </motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
           {(Object.entries(skills) as [keyof CategorizedSkills, Skill[]][]).map(
             ([category, items]) => (
