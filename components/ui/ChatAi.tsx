@@ -163,7 +163,7 @@ export function ChatAi() {
 
       <SheetContent
         side="right"
-        className="bg-linear-to-b from-gray-50 to-white border-l-gray-200 text-gray-900 w-full sm:max-w-md p-0 flex flex-col h-screen "
+        className="bg-linear-to-b from-gray-50 to-white border-l-gray-200 text-gray-900 w-full sm:max-w-md p-0 flex flex-col md:h-[90vh] mt-16 "
       >
         <SheetHeader className="p-6 border-b border-gray-200 bg-white/80">
           <div className="flex items-center justify-between">
