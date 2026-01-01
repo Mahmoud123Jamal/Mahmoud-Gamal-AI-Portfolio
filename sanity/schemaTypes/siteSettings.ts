@@ -17,7 +17,7 @@ export default defineType({
       name: "siteDescription",
       title: "Site Description",
       type: "text",
-      options: { rows: 3 },
+      options: { rows: 3 } as any,
       validation: (Rule) => Rule.max(160),
     }),
     defineField({

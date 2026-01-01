@@ -35,7 +35,7 @@ export default defineType({
       type: "text",
       options: {
         rows: 2,
-      },
+      } as any,
       validation: (Rule) => Rule.max(150),
     }),
     defineField({
