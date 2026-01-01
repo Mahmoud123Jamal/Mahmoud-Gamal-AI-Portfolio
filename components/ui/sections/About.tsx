@@ -4,18 +4,19 @@ import { PortableText } from "@portabletext/react";
 import { Download } from "lucide-react";
 
 async function About() {
-  const { data: profileData } = await sanityFetch({ query: HERO_QUERY });
+  try {
+    const { data: profileData } = await sanityFetch({ query: HERO_QUERY });
 
-  if (!profileData) return null;
+    if (!profileData) return null;
 
-  return (
+    return (
     <div className="text-white px-6 md:px-16 py-20 flex flex-col items-center">
       <div className="max-w-4xl w-full text-center space-y-6">
         <div className="space-y-2">
           <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-zinc-900 dark:text-white">
             About Me
           </h2>
-          <p className="text-teal-500 font-medium uppercase tracking-widest text-sm md:text-base">
+          <p className="text-muted-foreground font-medium uppercase tracking-widest text-sm md:text-base">
             Know more about me
           </p>
         </div>
@@ -28,12 +29,12 @@ async function About() {
           )}
         </div>
 
-        <div className="pt-10">
+        <div className="pt-5">
           <a
             href="https://drive.google.com/drive/folders/1ZJo7OfEwOwHc7ZvRYspsvTtQ2xWzVQif?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-teal-600 hover:bg-teal-500 text-white font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-teal-500/20 hover:-translate-y-1"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-[#0077b5] hover:bg-[#0077b9] text-white font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-teal-500/20 hover:-translate-y-1"
           >
             <Download className="w-5 h-5" />
             Download CV
@@ -41,7 +42,11 @@ async function About() {
         </div>
       </div>
     </div>
-  );
+    );
+  } catch (error) {
+    console.error("Error fetching about data:", error);
+    return null;
+  }
 }
 
 export default About;
