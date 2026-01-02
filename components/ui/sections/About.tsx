@@ -13,7 +13,7 @@ async function About() {
     <div className="text-white px-6 md:px-16 py-20 flex flex-col items-center">
       <div className="max-w-4xl w-full text-center space-y-6">
         <div className="space-y-2">
-          <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-zinc-900 dark:text-white">
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-zinc-900 ">
             About Me
           </h2>
           <p className="text-muted-foreground font-medium uppercase tracking-widest text-sm md:text-base">

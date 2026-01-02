@@ -29,7 +29,7 @@ export default function SkillsClient({
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="text-4xl text-center mb-8 md:text-6xl font-bold tracking-tighter text-zinc-900 dark:text-white"
+          className="text-4xl text-center mb-8 md:text-6xl font-bold tracking-tighter text-zinc-900 "
         >
           My Skills
         </motion.h2>

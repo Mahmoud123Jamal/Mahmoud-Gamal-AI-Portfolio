@@ -39,7 +39,7 @@ export default function Contact() {
   return (
     <section className=" px-6">
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-4xl text-center mb-8 md:text-6xl font-bold tracking-tighter text-zinc-900 dark:text-white">
+        <h2 className="text-4xl text-center mb-8 md:text-6xl font-bold tracking-tighter text-zinc-900 ">
           Contact Me
         </h2>
 
@@ -49,27 +49,27 @@ export default function Contact() {
               name="name"
               placeholder="Name"
               required
-              className="p-3 rounded bg-gray-100 dark:bg-gray-800 dark:text-white outline-none focus:ring-2 focus:ring-blue-500"
+              className="p-3 rounded bg-gray-50   outline-none focus:ring-2 focus:ring-blue-500"
             />
             <input
               name="email"
               type="email"
               placeholder="Email"
               required
-              className="p-3 rounded bg-gray-100 dark:bg-gray-800 dark:text-white outline-none focus:ring-2 focus:ring-blue-500"
+              className="p-3 rounded bg-gray-100 outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
           <input
             name="subject"
             placeholder="Subject"
-            className="w-full p-3 rounded bg-gray-100 dark:bg-gray-800 dark:text-white outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full p-3 rounded bg-gray-100 outline-none focus:ring-2 focus:ring-blue-500"
           />
           <textarea
             name="message"
             placeholder="Message"
             rows={5}
             required
-            className="w-full p-3 rounded bg-gray-100 dark:bg-gray-800 dark:text-white outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full p-3 rounded bg-gray-100  outline-none focus:ring-2 focus:ring-blue-500"
           />
 
           <button
